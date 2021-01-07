@@ -1,0 +1,19 @@
+
+.body-asking {
+  text-align: center;
+  padding: 1%;
+  background-color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  color: #FF1154;
+  font-family: 'MADE Dillan', sans-serif;
+  padding: 2%;
+}
+
+.accordion {
+  padding-right: 20%;
+  padding-left: 20%;
+  padding-bottom: 5%;
+}

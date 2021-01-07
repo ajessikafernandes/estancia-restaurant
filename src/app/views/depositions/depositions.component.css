@@ -1,0 +1,24 @@
+.body-depositions {
+  background-color: whitesmoke;
+}
+
+h1 {
+  font-family: "MADE Dillan", sans-serif;
+  text-align: center;
+}
+
+p,
+h4 {
+  line-height: 2em;
+}
+
+.icon {
+  font-size: 25px;
+  padding: 1%;
+  color: #f44336;
+}
+
+mat-icon {
+  font-size: 15px;
+  color: #f44336;
+}
