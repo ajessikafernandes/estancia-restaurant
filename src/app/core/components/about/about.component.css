@@ -1,0 +1,39 @@
+h1 {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: whitesmoke;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: "Roboto Light", sans-serif;
+  color: #cfd5d8;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: #cfd5d8;
+  padding: 5% 10% 5%;
+  font-family: "Roboto Thin", sans-serif;
+  font-size: 16px;
+  line-height: 2em;
+}
+
+.banner-about {
+  display: flex;
+  background-color: #2e2e2c;
+}
+
+.img-about {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background: url(banner-meat.jpg);
+}
+
+.banner-about-description {
+  margin: auto;
+}

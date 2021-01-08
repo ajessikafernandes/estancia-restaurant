@@ -1,0 +1,60 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [(mode)]="over" [(opened)]="opened">
+        <mat-toolbar>Menu</mat-toolbar>
+        <div>
+            <mat-nav-list>
+                <mat-list-item>
+                    <a mat-list-item routerLink="." (click)="sidenav.toggle()">Home</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a mat-list-item routerLink="." [matMenuTriggerFor]="menu">Cardápio</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a mat-list-item routerLink="." (click)="sidenav.toggle()">Fotos</a>
+                </mat-list-item>
+                <mat-list-item>
+                    <a mat-list-item routerLink="." (click)="sidenav.toggle()">Contato</a>
+                </mat-list-item>
+            </mat-nav-list>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <mat-toolbar color="basic">
+            <button mat-icon-button (click)="sidenav.toggle()" fxShow="false" fxHide.lt-md="false">
+                <mat-icon class="menu-icon">menu</mat-icon>
+            </button>
+            <a mat-button class="logo" routerLink="/">
+                <span>{{nomeLogo}}</span>
+            </a>
+            <span class="menu-spacer"></span>
+            <div fxShow="true" fxHide.lt-md="true">
+                <a mat-button routerLink="/inicio">Home</a>
+                <a mat-button routerLink="/cardapio" [matMenuTriggerFor]="menu">Cardápio</a>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>local_pizza</mat-icon>
+                        <span>Rodízio de Pizza</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>local_fire_department</mat-icon>
+                        <span>Rodízio de Churrasco</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>wine_bar</mat-icon>
+                        <span>Bebidas</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>restaurant_menu</mat-icon>
+                        <span>Sobremesas</span>
+                    </button>
+                </mat-menu>
+                <a mat-button routerLink="/fotos">Fotos</a>
+                <a mat-button routerLink="/contato">Contato</a>
+            </div>
+        </mat-toolbar>
+
+        <app-home></app-home>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

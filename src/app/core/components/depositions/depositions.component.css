@@ -1,0 +1,26 @@
+.body-depositions {
+  background-color: whitesmoke;
+}
+
+h1 {
+  font-family: "MADE Dillan", sans-serif;
+  text-align: center;
+}
+
+p, mat-card-subtitle {
+  line-height: 2em;
+  text-align: center;
+}
+
+.icon {
+  font-size: 25px;
+  padding: 1%;
+  color: #f44336;
+}
+
+.banner-cards-depositions {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+}

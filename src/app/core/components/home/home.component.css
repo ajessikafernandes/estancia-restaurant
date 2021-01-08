@@ -1,0 +1,50 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+h1 {
+  font-size: 100px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .fundo{
+    text-align: center;
+  }
+}
+
+p {
+  font-size: 25px;
+  padding-bottom: 5px;
+  text-shadow: 5px 5px 15px black;
+}
+
+.fundo {
+  background: url(estancia.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+.button-cardapio {
+  font-size: 16px;
+  padding: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: whitesmoke;
+}
+
+.button-cardapio:hover {
+  padding: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: darkred;
+  opacity: 0.7;
+  transition: 0.1s;
+  color: whitesmoke;
+}
