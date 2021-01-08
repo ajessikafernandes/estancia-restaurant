@@ -9,7 +9,7 @@ h1 {
 h2 {
   font-size: 16px;
   font-family: "Roboto Light", sans-serif;
-  color: #CFD5D8;
+  color: #cfd5d8;
   text-align: center;
 }
 
@@ -22,9 +22,18 @@ p {
   line-height: 2em;
 }
 
+.banner-about {
+  display: flex;
+  background-color: #2e2e2c;
+}
+
 .img-about {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background: url(banner-meat.jpg);
+}
+
+.banner-about-description {
+  margin: auto;
 }

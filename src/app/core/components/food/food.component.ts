@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FoodComponent implements OnInit {
 
-  constructor() { }
+  tituloBanner: 'Um dos restaurantes mais tradicionais da Região';
+  subTituloBanner: 'Seja no almoço, jantar, happy hour ou eventos, estamos esperando por você!';
+
+  constructor(){}
 
   ngOnInit(): void {
   }

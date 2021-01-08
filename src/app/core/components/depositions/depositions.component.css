@@ -7,9 +7,9 @@ h1 {
   text-align: center;
 }
 
-p,
-h4 {
+p, mat-card-subtitle {
   line-height: 2em;
+  text-align: center;
 }
 
 .icon {
@@ -18,7 +18,9 @@ h4 {
   color: #f44336;
 }
 
-mat-icon {
-  font-size: 15px;
-  color: #f44336;
+.banner-cards-depositions {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 5%;
+  padding-top: 5%;
 }
