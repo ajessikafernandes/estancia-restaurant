@@ -5,11 +5,13 @@
 h1 {
   font-size: 100px;
   width: 100%;
+  line-height: 9.5rem;
 }
 
 @media (max-width: 600px) {
   h1 {
     font-size: 40px;
+    line-height: 4.5rem;
   }
 
   .fundo{
