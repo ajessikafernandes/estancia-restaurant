@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  nomeLogo: 'Estância';
-  opened = false;
-  over = 'side';
+  nomeLogo: string;
+  opened: boolean;
+  over: string;
 
-  constructor() {}
+  constructor() {
+    this.nomeLogo = 'Estância';
+    this.opened = false;
+    this.over = 'side';
+  }
 
   ngOnInit(): void {
   }
