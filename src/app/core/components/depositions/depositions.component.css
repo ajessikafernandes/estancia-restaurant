@@ -3,11 +3,15 @@
 }
 
 h1 {
-  font-family: "MADE Dillan", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 40px;
+  padding-top: 3%;
   text-align: center;
 }
 
-p, mat-card-subtitle {
+p,
+mat-card-subtitle {
   line-height: 2em;
   text-align: center;
 }

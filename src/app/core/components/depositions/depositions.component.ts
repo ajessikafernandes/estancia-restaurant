@@ -7,21 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepositionsComponent implements OnInit {
 
-  titleBanner: 'Depoimento dos nossos Clientes';
+  titleBanner: string;
 
-  depositions1: 'almoçei com minha namorada exelente atendimento funcionaros otimos buffe maravilhoso ambiente muito bom..adorei';
+  depositions1: string;
 
-  author1: 'Daniel P.';
+  author1: string;
 
-  depositions2: 'Fui com minha família, pedimos rodízio, fomos muito bem atendidos. Churrasco muito gostoso, várias opções. Tem estacionamento também.';
+  depositions2: string;
 
-  author2: 'Ludia';
+  author2: string;
 
-  depositions3: 'Como todo brasileiro sou apaixonado por churrasco e pizza... então nada melhor que aproveitar o rodizio nesse estabelecimento.';
+  depositions3: string;
 
-  author3: 'Pedro S.';
+  author3: string;
 
-  constructor() {}
+  constructor() {
+    this.titleBanner = 'Depoimento dos nossos Clientes';
+    this.depositions1 = 'almoçei com minha namorada exelente atendimento funcionaros otimos buffe maravilhoso ambiente muito bom..adorei';
+    this.author1 = 'Daniel P.';
+    this.depositions2 = 'Fui com minha família, pedimos rodízio, fomos muito bem atendidos. Churrasco muito gostoso, várias opções. Tem estacionamento também.';;
+    this.author2 = 'Ludia';
+    this.depositions3 ='Como todo brasileiro sou apaixonado por churrasco e pizza... então nada melhor que aproveitar o rodizio nesse estabelecimento.';
+    this.author3 = 'Pedro S.';
+  }
 
   ngOnInit() {
   }
