@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskingComponent implements OnInit {
 
-  tituloBanner: 'Perguntas Frequentes';
+  tituloBanner: string;
 
-  panelOpenState = false;
+  panelOpenState : boolean;
 
-  constructor() {}
+  constructor() {
+    this.tituloBanner = 'Perguntas Frequentes';
+    this.panelOpenState = false;
+  }
 
   ngOnInit(): void {
   }
