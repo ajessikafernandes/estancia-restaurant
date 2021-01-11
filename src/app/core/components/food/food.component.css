@@ -3,9 +3,8 @@ div {
 }
 
 h1 {
-  padding-top: 0%;
   text-align: center;
-  font-size: 62px;
+  font-size: 50px;
   font-family: "MADE Dillan", sans-serif;
 }
 
@@ -17,36 +16,38 @@ h2 {
   padding: 3%;
 }
 
-
 p {
   font-family: "Roboto Light", sans-serif;
   line-height: 1.5rem;
 }
 
 .banner-food {
-  width: 80%;
-  padding-left: 10%;
-  padding-right: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  width: 100%;
+  padding: 5%;
+  padding-left: 2%;
+  text-align: center;
   background-color: #f7f8f8;
 }
 
 @media (max-width: 600px) {
   div {
     text-align: center;
-    padding: 3%;
+    padding: 0%;
     width: 100%;
+    padding-bottom: 20px;
   }
-
   h1 {
     font-size: 26px;
+    line-height: 2.5rem;
+    text-align: center;
     background-color: #f7f8f8;
+    padding-top: 45px;
+    padding-bottom: 20px;
+
   }
 
-  h1,
   .banner-food {
-    padding-top: 45px;
-    padding-bottom: 0%;
+    padding: 1%;
+    text-align: center;
   }
 }
