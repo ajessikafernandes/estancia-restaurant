@@ -1,27 +1,57 @@
 # Estancia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/LICENSE)
 
-## Development server
+# Sobre o Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Link Demo: https://ajessikafernandes.github.io/estancia-restaurant/
 
-## Code scaffolding
+Este projeto tem o intuito de consolidar o aprendizado em Angular e suas tecnologias.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A aplicação consiste em apresentar o portifolio do restaurante Estância, construido atravês de um site responsivo, demonstra as principais informações sobre o estabelecimento e seu funcionamento.
 
-## Build
+## Layout Web
+![Web 1](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/src/assets/Web1.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Layout Mobile
+![Mobile 1](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/src/assets/Mobile1.png)
 
-## Running unit tests
+# Tecnologias utilizadas
+## Front end
+- [Angular CLI](https://github.com/angular/angular-cli) versão 11.0.4
+- [TypeScript](https://www.typescriptlang.org) versão 4.0.2
+- [Html 5](https://devdocs.io/html/)
+- [CSS 3](https://devdocs.io/css/)
+- [Karma](https://karma-runner.github.io/latest/index.html)
+- [Protractor](http://www.protractortest.org/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Implantação em produção
+- Front end web: [GitHub Pages](https://docs.github.com/en/free-pro-team@latest/github/working-with-github-pages/getting-started-with-github-pages)
 
-## Running end-to-end tests
+## Construindo o Ambiente de Desenvolvimento
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Para executar o projeto via terminal, use o comando :
 
-## Further help
+`ng serve`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Escolha o navegador de sua preferência e acessa a url: 
+
+`http://localhost:4200/`
+
+## Executando testes unitários
+
+Para executar os testes unitários via [Karma](https://karma-runner.github.io), use o comando :
+
+`ng test` 
+
+## Executando testes end-to-end
+
+Para executar os testes unitários via [Protractor](http://www.protractortest.org/), use o comando :
+
+`ng e2e`
+
+# Autor
+
+Jéssika Fernandes
+
+https://www.linkedin.com/in/ajessikafernandes/
