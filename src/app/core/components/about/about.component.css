@@ -27,13 +27,32 @@ p {
   background-color: #2e2e2c;
 }
 
-.img-about {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background: url(banner-meat.jpg);
+.banner-about-image {
+  width: 50%;
+  height: 550px;
+  background: url(https://cutt.ly/1jv2BYL);
 }
 
 .banner-about-description {
   margin: auto;
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  p {
+    text-align: center;
+    color: #cfd5d8;
+    padding: 1, 5%;
+    padding-top: 3%;
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 16px;
+    line-height: 2em;
+  }
+
+  .banner-about-description {
+    margin: auto;
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 3%;
+  }
 }
