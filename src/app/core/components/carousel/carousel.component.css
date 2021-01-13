@@ -1,0 +1,10 @@
+.carousel-cell {
+  padding: 2%;
+}
+
+p,
+mat-card-subtitle {
+  line-height: 2em;
+  text-align: center;
+  display: inline-block;
+}
