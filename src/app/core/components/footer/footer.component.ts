@@ -11,7 +11,7 @@ export class FooterComponent implements OnInit {
 
   nomeFantasia: string;
 
-  constructor(){
+  constructor() {
     this.date = new Date().getFullYear();
     this.nomeFantasia = 'Estância Churrascaria e Pizzaria';
   }

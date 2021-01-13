@@ -6,8 +6,7 @@ h4 {
 p {
   font-size: 12px;
   text-align: center;
-  font-family: 'Roboto Light', sans-serif;
-
+  font-family: "Roboto Light", sans-serif;
 }
 
 mat-icon {
@@ -16,10 +15,10 @@ mat-icon {
   padding: 2%;
 }
 
-button, mat-button{
+button,
+mat-button {
   font-size: 12px;
-  font-family: 'Roboto Light', sans-serif;
-
+  font-family: "Roboto Light", sans-serif;
 }
 .copy {
   padding: 1%;
