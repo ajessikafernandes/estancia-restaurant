@@ -10,7 +10,7 @@ export class FoodComponent implements OnInit {
   tituloBanner: string;
   subTituloBanner: string;
 
-  constructor(){
+  constructor() {
     this.tituloBanner = 'Um dos restaurantes mais tradicionais da Região';
     this.subTituloBanner = 'Seja no almoço, jantar, happy hour ou eventos, estamos esperando por você!';
   }

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FoodComponent } from './components/food/food.component';
 import { DepositionsComponent } from './components/depositions/depositions.component';
 import { AboutComponent } from './components/about/about.component';
 import { AskingComponent } from './components/asking/asking.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -24,15 +25,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 @NgModule({
   declarations: [
-    MenuComponent,
     HomeComponent,
     FoodComponent,
     DepositionsComponent,
     AboutComponent,
     AskingComponent,
+    CarouselComponent,
+    MenuComponent,
     FooterComponent,
   ],
   imports: [
@@ -52,14 +55,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatExpansionModule,
     FlexLayoutModule,
     MatSidenavModule,
+    IvyCarouselModule
   ],
   exports: [
-    MenuComponent,
     HomeComponent,
     FoodComponent,
     DepositionsComponent,
     AboutComponent,
     AskingComponent,
+    CarouselComponent,
+    MenuComponent,
     FooterComponent,
   ]
 
