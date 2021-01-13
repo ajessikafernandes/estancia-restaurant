@@ -11,10 +11,10 @@ Este projeto tem o intuito de consolidar o aprendizado em Angular e suas tecnolo
 A aplicação consiste em apresentar o portifolio do restaurante Estância, construido atravês de um site responsivo, demonstra as principais informações sobre o estabelecimento e seu funcionamento.
 
 ## Layout Web
-![Web 1](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/src/assets/Web1.png)
+![Web 1](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/src/assets/img/Web1.png)
 
 ## Layout Mobile
-![Mobile 1](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/src/assets/Mobile1.png)
+![Mobile 1](https://github.com/ajessikafernandes/estancia-restaurant/blob/main/src/assets/img/Mobile1.png)
 
 # Tecnologias utilizadas
 ## Front end
