@@ -154,6 +154,9 @@ Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
 
 
+angular-responsive-carousel
+Apache License 2.0
+
 css-loader
 MIT
 Copyright JS Foundation and other contributors
