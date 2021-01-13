@@ -6,25 +6,18 @@ h1 {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 40px;
-  padding-top: 3%;
+  line-height: 1.5em;
+  padding-top: 2%;
   text-align: center;
 }
 
-p,
-mat-card-subtitle {
-  line-height: 2em;
+.five-star {
+  padding-top: 2%;
   text-align: center;
 }
 
 .icon {
-  font-size: 25px;
+  font-size: 35px;
   padding: 1%;
   color: #f44336;
-}
-
-.banner-cards-depositions {
-  padding-right: 10%;
-  padding-left: 10%;
-  padding-bottom: 5%;
-  padding-top: 5%;
 }

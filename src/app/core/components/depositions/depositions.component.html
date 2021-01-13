@@ -1,6 +1,6 @@
 <div class="body-depositions">
     <br>
-    <p>
+    <p class="five-star">
         <mat-icon class="icon" aria-hidden="false">star</mat-icon>
         <mat-icon class="icon" aria-hidden="false">star</mat-icon>
         <mat-icon class="icon" aria-hidden="false">star</mat-icon>
@@ -8,27 +8,6 @@
         <mat-icon class="icon" aria-hidden="false">star</mat-icon>
     </p>
     <h1>{{titleBanner}}</h1>
-    <div class="banner-cards-depositions">
-        <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="16px">
-            <mat-card class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-                <mat-card-content>
-                    <p>{{depositions1}}</p>
-                </mat-card-content>
-                <mat-card-subtitle>{{author1}}</mat-card-subtitle>
-            </mat-card>
-            <mat-card class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-                <mat-card-content>
-                    <p>{{depositions2}}</p>
-                </mat-card-content>
-                <mat-card-subtitle>{{author2}}</mat-card-subtitle>
-            </mat-card>
-            <mat-card class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)">
-                <mat-card-content>
-                    <p>{{depositions3}}</p>
-                </mat-card-content>
-                <mat-card-subtitle>{{author3}}</mat-card-subtitle>
-            </mat-card>
-        </div>
-    </div>
+    <app-carousel></app-carousel>
     <br>
 </div>
