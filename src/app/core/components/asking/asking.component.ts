@@ -9,7 +9,7 @@ export class AskingComponent implements OnInit {
 
   tituloBanner: string;
 
-  panelOpenState : boolean;
+  panelOpenState: boolean;
 
   constructor() {
     this.tituloBanner = 'Perguntas Frequentes';
