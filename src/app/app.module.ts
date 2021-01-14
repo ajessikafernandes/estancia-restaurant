@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
+import { DepositionService } from './data/service/deposition.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [DepositionService],
   bootstrap: [AppComponent]
 })
 
