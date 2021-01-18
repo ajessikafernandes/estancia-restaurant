@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'estancia';
+
+  nomeLogo: string;
+  opened: boolean;
+  over: string;
+
+  constructor() {
+    this.nomeLogo = 'Estância';
+    this.opened = false;
+    this.over = 'side';
+  }
 }
