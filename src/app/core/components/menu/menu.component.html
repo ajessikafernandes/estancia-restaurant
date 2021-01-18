@@ -1,30 +1,17 @@
 <div class="banner-menu" style="text-align: center; padding: 2%;">
-    <h1>CARDÁPIO</h1>
+    <h1>{{pageTitle}}</h1>
 </div>
 
-<mat-tab-group>
-    <mat-tab>
-        <ng-template mat-tab-label>
-            Churrascaria
-        </ng-template>
+<mat-tab-group style="padding-top: 40px; padding-left: 2%; padding-right: 2%;">
+    <mat-tab label="Churrascaria">
         <div style="text-align: center; padding: 2%;">
-
-            <h1>Steak</h1>
-
-            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
-                17 temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos
-                os nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode
-                acrescentar ao seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45.
-                A gramatura dos produtos equivale ao peso in natura. </p>
-
+            <h1>{{titleSteak}}</h1>
+            <p>{{descriptionSteak}} </p>
             <br>
-
             <h1>{{titleCuts1}}</h1>
-
             <br>
-
             <mat-grid-list cols="3">
-                <mat-grid-tile  *ngFor="let tradicionalCuts of tradicionalCutsList">
+                <mat-grid-tile *ngFor="let tradicionalCuts of tradicionalCutsList">
                     <div style="padding: 10%;">
                         <mat-card class="example-card" fxFlex="calc(33.3%-25px)" fxFlex.sm="calc(50%-25px)">
                             <mat-card-header>
@@ -38,13 +25,10 @@
                     </div>
                 </mat-grid-tile>
             </mat-grid-list>
-
             <br>
-
             <h1>{{titleCuts2}}</h1>
-
             <mat-grid-list cols="3">
-                <mat-grid-tile  *ngFor="let novelCuts of novelCutsList">
+                <mat-grid-tile *ngFor="let novelCuts of novelCutsList">
                     <div style="padding: 10%;">
                         <mat-card class="example-card" fxFlex="calc(33.3%-25px)" fxFlex.sm="calc(50%-25px)">
                             <mat-card-header>
@@ -58,13 +42,10 @@
                     </div>
                 </mat-grid-tile>
             </mat-grid-list>
-
             <br>
-
             <h1>{{titleCuts3}}</h1>
-
             <mat-grid-list cols="3">
-                <mat-grid-tile  *ngFor="let cuttingFish of cuttingFishList">
+                <mat-grid-tile *ngFor="let cuttingFish of cuttingFishList">
                     <div style="padding: 10%;">
                         <mat-card class="example-card" fxFlex="calc(33.3%-25px)" fxFlex.sm="calc(50%-25px)">
                             <mat-card-header>
@@ -78,99 +59,35 @@
                     </div>
                 </mat-grid-tile>
             </mat-grid-list>
-
         </div>
     </mat-tab>
 
-    <mat-tab>
-        <ng-template mat-tab-label>
-            Pizzaria
-        </ng-template>
-        <div style="text-align: center; padding: 2%;">
-            <h1>Pizzaria</h1>
+    <mat-tab label="Pizzaria">
+        <div style="text-align: center; padding: 2%; text-align: center;">
+            <h1>{{titleBannerPizza}}</h1>
+            <p>{{descriptionBannerPizza}} </p>
             <br>
-            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
-                17
-                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
-                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
-                ao
-                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
-                dos
-                produtos equivale ao peso in natura.</p>
+            <h1>{{titlePizza1}}</h1>
+            <br>
+            <div *ngFor="let pizza of tradicionalPizzasList">
+                <h3>{{pizza.titlePizza}}</h3>
+                <p>{{pizza.ingredients}}</p>
+            </div>
+            <br>
+            <h1>{{titlePizza2}}</h1>
+            <br>
+            <div *ngFor="let pizza of sweetPizzasList">
+                <h3>{{pizza.titlePizza}}</h3>
+                <p>{{pizza.ingredients}}</p>
+            </div>
         </div>
     </mat-tab>
 
-    <mat-tab>
-        <ng-template mat-tab-label>
-            Frutos do Mar
-        </ng-template>
+    <mat-tab label="Leve para Casa">
         <div style="text-align: center; padding: 2%;">
-            <h1>Frutos do Mar</h1>
-            <br>
-            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
-                17
-                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
-                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
-                ao
-                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
-                dos
-                produtos equivale ao peso in natura.</p>
-        </div>
-    </mat-tab>
-
-    <mat-tab>
-        <ng-template mat-tab-label>
-            Sobremesas
-        </ng-template>
-        <div style="text-align: center; padding: 2%;">
-            <h1>Sobremesas</h1>
-            <br>
-            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
-                17
-                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
-                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
-                ao
-                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
-                dos
-                produtos equivale ao peso in natura.</p>
-        </div>
-    </mat-tab>
-
-    <mat-tab>
-        <ng-template mat-tab-label>
-            Bebidas
-        </ng-template>
-        <div style="text-align: center; padding: 2%;">
-            <h1>Bebidas</h1>
-            <br>
-            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
-                17
-                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
-                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
-                ao
-                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
-                dos
-                produtos equivale ao peso in natura.</p>
-        </div>
-    </mat-tab>
-
-    <mat-tab>
-        <ng-template mat-tab-label>
-            Leve para Casa
-        </ng-template>
-        <div style="text-align: center; padding: 2%;">
-
-            <h1> Leve para Casa</h1>
-            <br>
-            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
-                17
-                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
-                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
-                ao
-                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
-                dos
-                produtos equivale ao peso in natura.</p>
+            <p>{{descriptionBannerPizza}}</p>
         </div>
     </mat-tab>
 
 </mat-tab-group>
+<app-footer></app-footer>
