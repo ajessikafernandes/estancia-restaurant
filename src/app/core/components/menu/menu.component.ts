@@ -1,22 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { SteakhouseService } from 'src/app/data/service/steakhouse.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  providers: [
+    SteakhouseService,
+  ]
 })
 export class MenuComponent implements OnInit {
-  nomeLogo: string;
-  opened: boolean;
-  over: string;
 
-  constructor() {
-    this.nomeLogo = 'Estância';
-    this.opened = false;
-    this.over = 'side';
+  panelOpenState = false;
+
+  titleCuts1: string;
+  titleCuts2: string;
+  titleCuts3: string;
+
+  tradicionalCutsList: any;
+
+  novelCutsList: any;
+
+  cuttingFishList: any;
+
+  constructor(private tradicionalService: SteakhouseService) {
+    this.titleCuts1 = 'Cortes Tradicionais';
+    this.titleCuts2 = 'Cortes Nobres';
+    this.titleCuts3 = 'Peixes';
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.tradicionalCutsList = this.tradicionalService.getTradicionalCuts();
+    this.novelCutsList = this.tradicionalService.getNovelCuts();
+    this.cuttingFishList = this.tradicionalService.getFishCuts();
   }
 
 }

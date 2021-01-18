@@ -1,60 +1,176 @@
-<mat-sidenav-container>
-    <mat-sidenav #sidenav [(mode)]="over" [(opened)]="opened">
-        <mat-toolbar>Menu</mat-toolbar>
-        <div>
-            <mat-nav-list>
-                <mat-list-item>
-                    <a mat-list-item routerLink="." (click)="sidenav.toggle()">Home</a>
-                </mat-list-item>
-                <mat-list-item>
-                    <a mat-list-item routerLink="." [matMenuTriggerFor]="menu">Cardápio</a>
-                </mat-list-item>
-                <mat-list-item>
-                    <a mat-list-item routerLink="." (click)="sidenav.toggle()">Fotos</a>
-                </mat-list-item>
-                <mat-list-item>
-                    <a mat-list-item routerLink="." (click)="sidenav.toggle()">Contato</a>
-                </mat-list-item>
-            </mat-nav-list>
+<div class="banner-menu" style="text-align: center; padding: 2%;">
+    <h1>CARDÁPIO</h1>
+</div>
+
+<mat-tab-group>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Churrascaria
+        </ng-template>
+        <div style="text-align: center; padding: 2%;">
+
+            <h1>Steak</h1>
+
+            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
+                17 temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos
+                os nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode
+                acrescentar ao seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45.
+                A gramatura dos produtos equivale ao peso in natura. </p>
+
+            <br>
+
+            <h1>{{titleCuts1}}</h1>
+
+            <br>
+
+            <mat-grid-list cols="3">
+                <mat-grid-tile  *ngFor="let tradicionalCuts of tradicionalCutsList">
+                    <div style="padding: 10%;">
+                        <mat-card class="example-card" fxFlex="calc(33.3%-25px)" fxFlex.sm="calc(50%-25px)">
+                            <mat-card-header>
+                                <mat-card-title style="text-align: center;">{{tradicionalCuts.meatType}}
+                                </mat-card-title>
+                            </mat-card-header>
+                            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                alt="Photo of a Shiba Inu">
+                            <mat-card-subtitle>{{tradicionalCuts.kilo}}</mat-card-subtitle>
+                        </mat-card>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+            <br>
+
+            <h1>{{titleCuts2}}</h1>
+
+            <mat-grid-list cols="3">
+                <mat-grid-tile  *ngFor="let novelCuts of novelCutsList">
+                    <div style="padding: 10%;">
+                        <mat-card class="example-card" fxFlex="calc(33.3%-25px)" fxFlex.sm="calc(50%-25px)">
+                            <mat-card-header>
+                                <mat-card-title style="text-align: center;">{{novelCuts.meatType}}
+                                </mat-card-title>
+                            </mat-card-header>
+                            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                alt="Photo of a Shiba Inu">
+                            <mat-card-subtitle>{{novelCuts.kilo}}</mat-card-subtitle>
+                        </mat-card>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+            <br>
+
+            <h1>{{titleCuts3}}</h1>
+
+            <mat-grid-list cols="3">
+                <mat-grid-tile  *ngFor="let cuttingFish of cuttingFishList">
+                    <div style="padding: 10%;">
+                        <mat-card class="example-card" fxFlex="calc(33.3%-25px)" fxFlex.sm="calc(50%-25px)">
+                            <mat-card-header>
+                                <mat-card-title style="text-align: center;">{{cuttingFish.meatType}}
+                                </mat-card-title>
+                            </mat-card-header>
+                            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                                alt="Photo of a Shiba Inu">
+                            <mat-card-subtitle>{{cuttingFish.kilo}}</mat-card-subtitle>
+                        </mat-card>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+
         </div>
-    </mat-sidenav>
+    </mat-tab>
 
-    <mat-sidenav-content>
-        <mat-toolbar color="basic">
-            <button mat-icon-button (click)="sidenav.toggle()" fxShow="false" fxHide.lt-md="false">
-                <mat-icon class="menu-icon">menu</mat-icon>
-            </button>
-            <a mat-button class="logo" routerLink="/">
-                <span>{{nomeLogo}}</span>
-            </a>
-            <span class="menu-spacer"></span>
-            <div fxShow="true" fxHide.lt-md="true">
-                <a mat-button routerLink="/inicio">Home</a>
-                <a mat-button routerLink="/cardapio" [matMenuTriggerFor]="menu">Cardápio</a>
-                <mat-menu #menu="matMenu">
-                    <button mat-menu-item>
-                        <mat-icon>local_pizza</mat-icon>
-                        <span>Rodízio de Pizza</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon>local_fire_department</mat-icon>
-                        <span>Rodízio de Churrasco</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon>wine_bar</mat-icon>
-                        <span>Bebidas</span>
-                    </button>
-                    <button mat-menu-item>
-                        <mat-icon>restaurant_menu</mat-icon>
-                        <span>Sobremesas</span>
-                    </button>
-                </mat-menu>
-                <a mat-button routerLink="/fotos">Fotos</a>
-                <a mat-button routerLink="/contato">Contato</a>
-            </div>
-        </mat-toolbar>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Pizzaria
+        </ng-template>
+        <div style="text-align: center; padding: 2%;">
+            <h1>Pizzaria</h1>
+            <br>
+            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
+                17
+                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
+                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
+                ao
+                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
+                dos
+                produtos equivale ao peso in natura.</p>
+        </div>
+    </mat-tab>
 
-        <app-home></app-home>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Frutos do Mar
+        </ng-template>
+        <div style="text-align: center; padding: 2%;">
+            <h1>Frutos do Mar</h1>
+            <br>
+            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
+                17
+                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
+                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
+                ao
+                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
+                dos
+                produtos equivale ao peso in natura.</p>
+        </div>
+    </mat-tab>
 
-    </mat-sidenav-content>
-</mat-sidenav-container>
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Sobremesas
+        </ng-template>
+        <div style="text-align: center; padding: 2%;">
+            <h1>Sobremesas</h1>
+            <br>
+            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
+                17
+                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
+                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
+                ao
+                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
+                dos
+                produtos equivale ao peso in natura.</p>
+        </div>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Bebidas
+        </ng-template>
+        <div style="text-align: center; padding: 2%;">
+            <h1>Bebidas</h1>
+            <br>
+            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
+                17
+                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
+                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
+                ao
+                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
+                dos
+                produtos equivale ao peso in natura.</p>
+        </div>
+    </mat-tab>
+
+    <mat-tab>
+        <ng-template mat-tab-label>
+            Leve para Casa
+        </ng-template>
+        <div style="text-align: center; padding: 2%;">
+
+            <h1> Leve para Casa</h1>
+            <br>
+            <p>Carnes assadas em grelha australiana, sempre no seu ponto preferido. Cada corte passa pelo nosso mix de
+                17
+                temperos secretos antes de ser preparado com técnicas especiais, na chapa ou em chama aberta. Todos os
+                nossos steaks são servidos com um acompanhamento à sua escolha. Se quiser, você também pode acrescentar
+                ao
+                seu pedido uma das nossas entradas (salada ou sopa do dia) com 50% de desconto: R$ 12,45. A gramatura
+                dos
+                produtos equivale ao peso in natura.</p>
+        </div>
+    </mat-tab>
+
+</mat-tab-group>
