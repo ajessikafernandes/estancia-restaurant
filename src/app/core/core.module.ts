@@ -26,6 +26,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
+import { PhotoComponent } from './components/photo/photo.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     CarouselComponent,
     MenuComponent,
     FooterComponent,
+    PhotoComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
@@ -66,6 +70,8 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     CarouselComponent,
     MenuComponent,
     FooterComponent,
+    PhotoComponent,
+    ContactComponent,
   ]
 
 })
