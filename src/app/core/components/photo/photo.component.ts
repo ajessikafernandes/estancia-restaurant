@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-photo',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhotoComponent implements OnInit {
 
-  constructor() { }
+  galleryImagesList: Array<any> = ([
+    { image: 'assets/img/1.PNG'},
+    { image: 'assets/img/2.PNG'},
+    { image: 'assets/img/3.PNG'},
+    { image: 'assets/img/4.PNG'},
+    { image: 'assets/img/5.PNG'},
+    { image: 'assets/img/6.PNG'},
+    { image: 'assets/img/7.PNG'},
+  ]);
+  screenWidth: number;
+  sizeWindow: 1;
 
-  ngOnInit(): void {
+  constructor() {
   }
+
+  ngOnInit() {}
 
 }

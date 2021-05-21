@@ -1,1 +1,6 @@
-<p>photo works!</p>
+<section class="grid-photos">
+  <div>
+    <img mat-card-image *ngFor="let image of galleryImagesList" class="map" src="{{image.image}}"/>
+  </div>
+</section>
+<app-footer></app-footer>
