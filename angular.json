@@ -126,5 +126,8 @@
       }
     }
   },
-  "defaultProject": "estancia"
+  "defaultProject": "estancia",
+  "cli": {
+    "analytics": "fc0386de-c361-4ceb-b49e-522ab5781b5a"
+  }
 }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SteakhouseService } from 'src/app/data/service/steakhouse.service';
 import { PizzeriaService } from 'src/app/data/service/pizzeria.service';
 
+import { HostListener } from "@angular/core";
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -12,6 +14,10 @@ import { PizzeriaService } from 'src/app/data/service/pizzeria.service';
   ]
 })
 export class MenuComponent implements OnInit {
+
+  screenWidth: number;
+
+  sizeWindow: number;
 
   panelOpenState = false;
 
@@ -25,13 +31,9 @@ export class MenuComponent implements OnInit {
 
   titleCuts2: string;
 
-  titleCuts3: string;
-
   tradicionalCutsList: any;
 
-  novelCutsList: any;
-
-  cuttingFishList: any;
+  garnishList: any;
 
   titleBannerPizza: string;
 
@@ -45,6 +47,8 @@ export class MenuComponent implements OnInit {
 
   sweetPizzasList: any;
 
+  descriptionDelivery: any;
+
   constructor(private steakhouseService: SteakhouseService, private pizzeriaService: PizzeriaService) {
 
     this.pageTitle = 'CARDÁPIO';
@@ -55,32 +59,39 @@ export class MenuComponent implements OnInit {
 
     this.titleCuts1 = 'Cortes Tradicionais';
 
-    this.titleCuts2 = 'Cortes Nobres';
-
-    this.titleCuts3 = 'Peixes';
+    this.titleCuts2 = 'Acompanhamentos';
 
     this.titleBannerPizza = 'Pizzas';
 
     this.titlePizza1 = 'Pizzas Salgadas';
 
-    this.titlePizza2 = 'Pizzas Doces'
+    this.titlePizza2 = 'Pizzas Doces';
 
     this.descriptionBannerPizza = 'Mesmo prezando pela tradição, o restaurante apresenta opções criativas em seu cardápio. Nele o cliente pode optar por sabores tradicionais, especiais e doces';
 
+    this.descriptionDelivery = 'Peça delivery e receba em casa de forma rápida. Faça seu pedido online e retire no restaurante. Veja todos os produtos do cardápio. Pague pelo app e evite filas.';
   }
 
   ngOnInit() {
 
     this.tradicionalCutsList = this.steakhouseService.getTradicionalCuts();
 
-    this.novelCutsList = this.steakhouseService.getNovelCuts();
-
-    this.cuttingFishList = this.steakhouseService.getFishCuts();
+    this.garnishList = this.steakhouseService.getGarnish();
 
     this.tradicionalPizzasList = this.pizzeriaService.getTradiconalPizzas();
 
     this.sweetPizzasList = this.pizzeriaService.getSweetPizzas();
 
+  }
+
+  @HostListener('window:resize', ['$event'])
+  getScreenSize(event?) {
+    this.screenWidth = window.innerWidth;
+    if (this.screenWidth > 800) {
+      this.sizeWindow = 3;
+    } else {
+      this.sizeWindow = 1;
+    }
   }
 
 }

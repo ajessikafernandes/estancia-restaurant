@@ -1,34 +1,30 @@
 import { Injectable } from '@angular/core';
 import { CuttingFish } from '../model/cutting-fish';
-import { NovelCuts } from '../model/novel-cuts';
+import { Garnish } from '../model/garnish';
 import { TraditionalCuts } from '../model/TraditionalCuts';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class SteakhouseService {
 
   traditionalCutsList: Array<TraditionalCuts> = ([
-    { traditionalCutsId: 1, linkImage: '', meatType: 'Picanha', kilo: '280 gramas' },
-    { traditionalCutsId: 2, linkImage: '', meatType: 'Fraldinha', kilo: '280 gramas' },
-    { traditionalCutsId: 3, linkImage: '', meatType: 'Maminha', kilo: '280 gramas' },
-    { traditionalCutsId: 4, linkImage: '', meatType: 'Alcatra', kilo: '280 gramas' },
-    { traditionalCutsId: 5, linkImage: '', meatType: 'Patinho', kilo: '280 gramas' },
-  ])
+    { traditionalCutsId: 1, meatType: 'FILET MIGNON', description: 'Coberto com molho de mostarda dijon, acompanha batata gratin (aprox 200grs) e farofa crocante.', value: '98' },
+    { traditionalCutsId: 2, meatType: 'ENTRECÔTE PREMIUM BLACK ANGUS', description: 'Coberto de Molho de Queijo Roquefort acompanha Espinafre cremoso (200grs aprox) e Farofa crocante.', value: '108' },
+    { traditionalCutsId: 3, meatType: 'FRALDINHA', description: 'Coberto com molho marchand du vin (base de molho roti + vinho tinto), acompanha batata gratin (200grs) e farofa crocante', value: '89' },
+    { traditionalCutsId: 4, meatType: 'FILET MIGNON DE CORDEIRO', description: 'Coberto com molho marchand du vin (molho à base de roti e vinho tinto), acompanha abóboras e cebolas assadas e farofa crocante', value: '98' },
+    { traditionalCutsId: 5, meatType: 'BISTECA DE PORCO', description: 'Coberto com molho de mostarda dijon, acompanha Espinafre Cremoso (200 grs aprox) e farofa crocante', value: '69' },
+    { traditionalCutsId: 5, meatType: 'SALMÃO GRELHADO', description: 'Coberto com Molho de Ervas, acompanha Legumes no Azeite e Farofa Crocante', value: '89' },
+    { traditionalCutsId: 5, meatType: 'ESCALOPE DE FRANGO KORIN', description: 'Coberto com molho de queijo roquefort, acompanha arroz com nozes e farofa crocante', value: '65' },
+  ]);
 
-  novelCutsList: Array<NovelCuts> = ([
-    { NovelCutsId: 1, linkImage: '', meatType: 'Assado de tira', kilo: '280 gramas' },
-    { NovelCutsId: 2, linkImage: '', meatType: 'Ancho', kilo: '280 gramas' },
-    { NovelCutsId: 3, linkImage: '', meatType: 'Chorizo', kilo: '280 gramas' },
-    { NovelCutsId: 4, linkImage: '', meatType: 'Raquete', kilo: '280 gramas' },
-    { NovelCutsId: 5, linkImage: '', meatType: 'Baby Beef', kilo: '280 gramas' },
-  ])
-
-  cuttingFishList: Array<CuttingFish> = ([
-    { fishCutsId: 1, linkImage: '', meatType: 'Salmão', kilo: '280 gramas' },
-    { fishCutsId: 1, linkImage: '', meatType: 'Anchova Negra', kilo: '280 gramas' },
-    { fishCutsId: 1, linkImage: '', meatType: 'Pescada Amarela', kilo: '280 gramas' },
-  ])
+  garnishList: Array<Garnish> = ([
+    { GarnishId: 1, name: 'BATATAS FRITAS 180g', value: '18' },
+    { GarnishId: 2, name: 'BATATAS FRITAS 360g', value: '28' },
+    { GarnishId: 3, name: 'RODÍZIO DE GUARNIÇÕES', value: '52' },
+    { GarnishId: 4, name: 'SALADA VERDE COM NOZES E ERVAS FRESCAS', value: '29' },
+  ]);
 
   constructor() { }
 
@@ -36,11 +32,8 @@ export class SteakhouseService {
     return this.traditionalCutsList;
   }
 
-  getNovelCuts() {
-    return this.novelCutsList;
+  getGarnish() {
+    return this.garnishList;
   }
 
-  getFishCuts() {
-    return this.cuttingFishList;
-  }
 }

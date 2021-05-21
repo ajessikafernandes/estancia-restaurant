@@ -9,6 +9,8 @@ import { AskingComponent } from './components/asking/asking.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PhotoComponent } from './components/photo/photo.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -26,8 +28,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
-import { PhotoComponent } from './components/photo/photo.component';
-import { ContactComponent } from './components/contact/contact.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -59,7 +62,11 @@ import { ContactComponent } from './components/contact/contact.component';
     MatExpansionModule,
     FlexLayoutModule,
     MatSidenavModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
   ],
   exports: [
     HomeComponent,

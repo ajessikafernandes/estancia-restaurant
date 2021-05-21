@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -23,6 +24,9 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { IvyCarouselModule } from 'angular-responsive-carousel';
@@ -33,6 +37,7 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     CoreModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -52,7 +57,10 @@ import { IvyCarouselModule } from 'angular-responsive-carousel';
     MatExpansionModule,
     FlexLayoutModule,
     MatSidenavModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
   ],
   providers: [DepositionService],
   bootstrap: [AppComponent]

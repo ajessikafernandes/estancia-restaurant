@@ -1,4 +1,4 @@
-import { NovelCuts } from './novel-cuts';
+import { NovelCuts } from './garnish';
 
 describe('NovelCuts', () => {
   it('should create an instance', () => {

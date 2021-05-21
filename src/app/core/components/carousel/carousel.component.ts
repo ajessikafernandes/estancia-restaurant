@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
-import { HostListener } from "@angular/core";
+import { HostListener } from '@angular/core';
 import { DepositionService } from 'src/app/data/service/deposition.service';
 
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
-  providers:[
+  providers: [
     DepositionService,
   ]
 })
@@ -19,7 +19,7 @@ export class CarouselComponent implements OnInit {
 
   sizeWindow: number;
 
-  constructor(private depositionService : DepositionService) {
+  constructor(private depositionService: DepositionService) {
     this.getScreenSize();
   }
 
@@ -33,7 +33,7 @@ export class CarouselComponent implements OnInit {
     }
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.depositionList = this.depositionService.get();
   };
 }
